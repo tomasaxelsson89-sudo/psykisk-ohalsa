@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psykisk hälsa hos unga</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Tillgänglighet: hoppa direkt till innehåll -->
+<a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+<header>
+  <h1>Psykisk hälsa hos unga</h1>
+  <p>Information och stöd för unga</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="orsaker.html">Orsaker</a></li>
+    <li><a href="symptom.html">Symptom</a></li>
+    <li><a href="hjalp.html" class="active" aria-current="page">Hjälp & stöd</a></li>
+    <li><a href="kallor.html">Källor</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+ <h2>Hjälp och stöd</h2>
+
+<p>
+Det finns hjälp att få om du mår dåligt. Du behöver inte klara allt själv.
+</p>
+
+<h3>Prata med någon du litar på</h3>
+<p>
+Att prata med en vän, familjemedlem eller lärare kan vara ett första steg.
+Att sätta ord på sina känslor kan göra det lättare att hantera dem.
+</p>
+
+<h3>Skolan</h3>
+<p>
+De flesta skolor har kurator eller skolsköterska som du kan prata med.
+De har tystnadsplikt och finns där för att hjälpa dig.
+</p>
+
+<h3>Vård och stödlinjer</h3>
+<p>
+Du kan kontakta vårdcentral eller ungdomsmottagning.
+Det finns också stödlinjer där du kan prata anonymt.
+</p>
+
+<h3>Ta hand om dig själv</h3>
+<p>
+Sömn, motion och pauser är viktiga för att må bra.
+Små förändringar i vardagen kan göra stor skillnad.
+</p>
+<h3>Tips för att må bättre</h3>
+
+<!-- Visa/dölj -->
+<button onclick="toggleInfo()">Visa tips</button>
+
+<div id="extraInfo" style="display: none;">
+  <p>
+    Att prata med någon, sova ordentligt och ta pauser kan hjälpa dig att må bättre.
+  </p>
+</div>
+
+<!-- Slumpmässiga tips -->
+<h3>Få ett slumpmässigt tips</h3>
+
+<button onclick="visaTips()">Få ett tips</button>
+
+<p id="tips"></p>
+
+  <img src="images/lugn.jpg" alt="Lugn natur med vatten som skapar en trygg känsla">
+
+</main>
+
+<footer>
+  <p>© 2026 | Projekt om psykisk hälsa</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
