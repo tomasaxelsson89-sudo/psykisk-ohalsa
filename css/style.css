@@ -1,0 +1,286 @@
+/* =========================
+   FÄRGVARIABLER
+========================= */
+:root {
+  --primary: #5a8f81;
+  --primary-dark: #3a5f56;
+  --secondary: #4f7c70;
+
+  --accent: #e6a96b;
+  --accent-dark: #d18f4f;
+
+  --background: #f4f8f7;
+  --text: #222;
+  --white: #ffffff;
+  --border: #e0e0e0;
+}
+
+/* =========================
+   GRUND
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* =========================
+   TYPOGRAFI
+========================= */
+h1, h2, h3 {
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+}
+
+p {
+  max-width: 65ch;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--secondary);
+}
+
+nav li {
+  margin: 0 0.5rem;
+}
+
+nav a {
+  display: block;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--primary-dark);
+}
+
+nav a.active {
+  background-color: var(--accent);
+  color: #333;
+  font-weight: bold;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   STANDARD BILDER
+========================= */
+main img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1rem;
+  transition: 0.25s ease;
+}
+
+main img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================
+   IMAGE GRID
+========================= */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.image-grid img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* =========================
+   LÄNKAR
+========================= */
+main a {
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   KNAPPAR
+========================= */
+button {
+  background-color: var(--accent);
+  color: #333;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent-dark);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* =========================
+   TILLGÄNGLIGHET
+========================= */
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: white;
+  padding: 10px;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: linear-gradient(
+      rgba(90, 143, 129, 0.85),
+      rgba(79, 124, 112, 0.85)
+    ),
+    url("images/lugn.jpg") center/cover no-repeat;
+
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  border: none;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+
+#tips {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* =========================
+   KÄLLOR
+========================= */
+.kallor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.kalla-kort {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.kalla-kort:hover {
+  background-color: #eef4f2;
+}
+
+.kalla-kort img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.kalla-kort a {
+  text-decoration: none;
+}
+
+.kalla-kort a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBIL
+========================= */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+}
